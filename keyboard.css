@@ -1,0 +1,99 @@
+.keyboard {
+    display: grid;
+    grid-template-columns: repeat(15, 1fr);
+    grid-gap: 5px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), rgba(130, 215, 252, 0.479)); /* Gradient de blanc à noir avec une opacité de 50% */
+  
+  }
+
+
+.key {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 50%;
+    height: 50px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    opacity: 30;
+    color: rgb(105, 104, 104);
+    font-weight: 500;
+}
+
+.key:hover {
+    background-color: #e9ecef;
+}
+
+.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+#key-Enter
+  {
+   grid-column: span 2;
+  }
+#key-maj
+  {
+    flex-direction: column;
+    height: max-content;
+    grid-column: span 2;
+  }
+
+#key-majuscule
+  {
+   
+    grid-column: span 2;
+    width: 107%;
+  }
+
+  #key-majuscule2
+  {
+   
+    grid-column: span 3;
+    width: 80%;
+    margin-left: 15%;
+  }
+
+  #key-Backspace
+    {
+        grid-column: span 2;
+    }
+
+#key-Tab
+  {
+    width: 70%;
+    grid-column: span 2;
+  }
+
+#key-A
+  {
+    margin-left:-20%;
+  }
+
+  .margin-10
+    {
+        margin-left:25%;
+        width: 100%;
+        
+    }
+
+    #key-W
+      {
+        width: 100%;
+      }
+
+#key-Space
+  {
+    grid-column: span 9;
+  }
+
+.symbol {
+font-size: 20px; /* Taille de la police pour l'emoji */
+color: black; /* Couleur de l'emoji */
+}

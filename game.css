@@ -1,0 +1,242 @@
+@font-face {
+    font-family: "JoeFont";
+    src: url("DMSerifDisplay-Italic.ttf");
+}
+
+*
+  {
+    box-sizing: border-box;
+  }
+
+ :root
+   {
+     --background-theme:url('Salar-de-Uyuni-Bolivia-Dry-salt-flats-Travelwithmk.com_.jpg');
+   }
+
+body
+  {
+    min-height: 100vh;
+    margin: 1% 0 0 0;
+    padding: 0 0 0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-theme) fixed center/cover;
+  }
+
+img
+  {
+    position: fixed;
+  }
+
+  #oiseau_beau
+    {
+      z-index: -1;
+       margin-left: 50%;
+    }
+
+
+#oiseau_joli
+  {
+    z-index: -1;
+    margin-top: 25%;
+    margin-left: 60%;
+  }
+#oiseau2
+  {
+    margin-top: 6%;
+    z-index: -1;
+    margin-left: -60%;
+    width: 100%;
+  }
+  :root
+    {
+      --myMarginTop: 5%;
+    }
+
+  #cupidon_2
+    {
+        margin-top: var(--myMarginTop);
+       width: 39%;
+      position: fixed;
+      z-index: -1;
+      margin-left: -75%;
+      transition: 2s ease;
+    }
+#cupidon_1
+  {
+    position: fixed;
+    z-index: -4;
+    transition: 2s ease;
+  }
+
+
+  #target
+  {
+     font-size: 2.5rem;
+     font-family: "joeFont";
+     text-transform: capitalize;
+     color: green;
+     filter: hue-rotate(0deg);
+     text-shadow:0px 0px 10px black;
+     transition: 2s ease;
+     align-self: flex-start;
+     letter-spacing: 0.4rem;
+  }
+
+  .title__item
+    {
+        text-align: center;
+        padding: 0;
+        width: 40%;
+    }
+
+  div .title-form
+    {
+        margin-top: 10%;
+        margin-left: -25%;
+         border-radius: 50%;
+         text-align: center;
+    }
+
+
+  #toggle
+    {
+        align-self: flex-end;
+        
+    }
+ 
+  .title__target__letter
+    {
+        font-size: 4rem;
+        transform:rotate(90deg)
+    }
+
+    .box--form
+    {
+        height: max-content;
+        width: content;
+        max-width: 100%;
+        letter-spacing: 0.1rem;
+        word-spacing: 0.4rem;
+        border: 4px solid white;
+        text-align: center;
+        border-radius: 6px;
+    }
+
+  #paragraph
+    {
+       font-size: 2rem;
+        font-family:'JoeFont';
+         font-weight: 700;
+         color: rgb(0, 0, 0);
+ }
+
+
+#paragraph2
+{
+  font-size: 2rem;
+    color: rgb(20, 230, 20);
+    font-family: 'JoeFont';
+    border: none;
+    font-weight: 700;
+}
+
+section
+  {
+    width: 100%;
+  }
+
+.guide {
+    margin-top: 1%;
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+     align-items: center;
+    height:fit-content; /* Hauteur de la div */
+}
+
+
+  #sous_gauche
+    {
+       align-self: flex-start;
+    }
+
+  #sous_droite
+  {
+     align-self: center;
+  }
+
+  #sous_centre
+    {
+      align-self: flex-end;
+    }
+
+
+.title
+  {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments aux extrémités */
+    align-items: center; /* Centre les éléments verticalement */
+    align-self: flex-start;
+    margin-top: -2%;
+  }
+
+#toggle_title
+  {
+    letter-spacing: 0.6rem;
+    font-family: "JoeFont";
+    color: white;
+    font-weight: 900;
+    text-shadow: 0 0 10px white;
+  }
+
+#toggle-list
+  {
+    text-align: center;
+    font-weight: 700;
+    font-family:"JoeFont";
+  }
+
+  .offcanvas-body-title
+    {
+        font-family: "JoeFont";
+        text-rendering: geometricPrecision;
+    }
+
+.guide__item--color
+  {
+    font-family: "JoeFont";
+    color: blue;
+  }
+
+  :root
+    {
+      --element-color: #0d6efd;
+    }
+
+.badge
+  {
+    background-color: var(--element-color);
+  }
+
+:root
+  {
+    --maVariable: #0d6efd;
+  }
+
+  .key-background
+    {
+      background-color: var(--maVariable);
+    }
+
+    #typing_errors_background
+      {
+        width: fit-content;
+      }
+
+      .typed {
+        color: green;
+    }
+
+

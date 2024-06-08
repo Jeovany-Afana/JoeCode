@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texte défilant au fur et à mesure de la saisie</title>
+<style>
+  #paragraph {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .typed-char {
+    display: inline-block;
+    width: 0;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .correct {
+    color: green;
+  }
+</style>
+</head>
+<body>
+<div id="paragraph"></div>
+
+<script>
+  const paragraph = document.getElementById("paragraph");
+  const longText = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tempor ullamcorper elit, ac pharetra nisi imperdiet nec. Quisque vel luctus odio. Integer vulputate felis eu justo ullamcorper sollicitudin. Sed et arcu eu dui tempor semper. Aliquam erat volutpat. Nam non feugiat felis, et tempus ex. Sed ultricies malesuada libero, a tristique nulla eleifend ut. Proin sed est vel dui scelerisque fermentum.";
+
+  let currentIndex = 0;
+
+  // Ajouter chaque caractère du texte dans des spans invisibles
+  for (let i = 0; i < longText.length; i++) {
+    const span = document.createElement("span");
+    span.textContent = longText[i];
+    paragraph.appendChild(span);
+  }
+
+  // Événement déclenché à chaque pression de touche
+  document.addEventListener("keypress", (event) => {
+    const typedChar = event.key;
+    const currentChar = paragraph.children[currentIndex];
+    if (currentChar.textContent === typedChar) {
+      currentChar.classList.add("correct");
+      currentIndex++;
+      currentChar.style.width = "auto"; // Afficher le caractère
+      currentChar.style.opacity = "1";
+    }
+  });
+</script>
+</body>
+</html>

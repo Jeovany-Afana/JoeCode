@@ -1,0 +1,49 @@
+@font-face {
+    font-family: "joeFont";
+    src: url('DMSerifDisplay-Italic.ttf');
+}
+
+*
+ {
+    box-sizing: border-box;
+ }
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centre les éléments verticalement */
+    align-items: center; /* Centre les éléments horizontalement */
+    min-height: 100vh; /* Assure que le corps de la page s'étend sur toute la hauteur de la fenêtre visible */
+   }
+
+#target
+ {
+    font-size: 10rem;
+    font-family: "joeFont";
+    text-transform: capitalize;
+    color: green;
+    animation: anim 50s forwards;
+    filter: hue-rotate(0deg);
+    letter-spacing: 0.7rem;
+ }
+
+ @keyframes anim {
+    
+     to
+      {
+         filter: hue-rotate(720deg);
+      }
+ }
+
+ #box-width
+  {
+     width: 400px;
+     position: fixed !important;
+     transition: 0.8s ease;
+  }
+
+ 
+
+

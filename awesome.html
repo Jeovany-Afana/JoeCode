@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typing Test</title>
+    <style>
+        /* Style pour les caractères déjà saisis */
+        .typed {
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="text-container"></div>
+
+    <script>
+       
+            const text = "Bonjour, ceci est un test de saisie.";
+            const textContainer = document.getElementById('text-container');
+            let currentIndex = 0;
+
+            // Fonction pour mettre à jour l'affichage des caractères saisis
+            function updateTypedChar(charIndex) {
+                const typedChars = textContainer.querySelectorAll('.typed-char');
+
+                // Parcourir chaque caractère
+                typedChars.forEach((char, index) => {
+                    // Si l'index du caractère est inférieur ou égal à charIndex, le marquer comme saisi
+                    if (index <= charIndex) {
+                        char.classList.add('typed');
+                    } else {
+                        char.classList.remove('typed');
+                    }
+                });
+            }
+
+            // Écouteur d'événements pour la pression des touches
+            document.addEventListener('keydown', function(event) {
+                // Vérifier si tout le texte n'a pas déjà été tapé
+                if (currentIndex < text.length) {
+                    const typedChar = text[currentIndex];
+
+                    // Vérifier si la touche pressée correspond au caractère attendu
+                    if (event.key === typedChar) {
+                        currentIndex++; // Incrémenter l'index pour passer au prochain caractère
+                        updateTypedChar(currentIndex - 1); // Mettre à jour l'affichage des caractères saisis
+                    }
+                }
+            });
+
+            // Initialiser l'affichage du texte
+            textContainer.innerHTML = text.split('').map(char => {
+                return `<span class="typed-char">${char}</span>`;
+            }).join('');
+        
+    </script>
+</body>
+</html>
